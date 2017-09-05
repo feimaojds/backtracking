@@ -21,7 +21,7 @@ public void backTracking(List<List<Integer>> res,List<Integer> temp,int[] nums,b
 		return;
 	}
 	for(int i=0;i<nums.length;i++){
-		if(used[i]==true || (nums[i] == nums[i-1] && used[i-1]==false)) continue;
+		if(used[i]==true || (i>0&&nums[i] == nums[i-1] && used[i-1]==false)) continue;
 		temp.add(nums[i]);
 		used[i] = true;
 		backTracking(res, temp, nums, used);
