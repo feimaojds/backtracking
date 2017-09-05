@@ -7,7 +7,7 @@ public class CombinationSum {
 	
 public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
-        
+        Arrays.sort(candidates);
         backTracking(res, new ArrayList<Integer>(), candidates, target,0);
         return res;
     }
